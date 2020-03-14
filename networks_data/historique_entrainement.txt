@@ -1,0 +1,9 @@
+Entrainement discriminateur :
+	- 1 : tout premier par Alex
+	- 2 : 2000 images venant du générateur, bon
+	- 3 : 2000 images venant du générateur, bon
+
+Entrainement generateur :
+	- 1 : entrainement avec l'entrainement 1, proba the tromper = 1
+	- 2 : entrainement avec l'entrainement 2, proba the tromper = 0.93
+	- 3 : kee
