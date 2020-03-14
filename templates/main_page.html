@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block titre %}
+MAPAGRAM : RESULTATS
+{% endblock %}
+
+{% block content %}
+
+<div class="page_container">
+    <div class="content">
+
+        <h2>Projet TDLOG - 2019/2020 </h2>
+        <h2>Génération de cartes d'élévation </h2>
+        <hr/>
+
+        <p><em>Explications</em>: Dans le cadre de notre
+          projet de développement logiciel, nous nous sommes intéressés à la
+          génération de cartes d'élévation grâce à l'utilisation de techniques
+          de machine learning. Nous avons choisi pour cela d'utiliser un
+          Generative Adversial Network, G.A.N. , et de laisser la possibilité à
+          l'utilisateur de modifier certains paramètres.
+
+          <br> Pour en savoir plus sur le fonctionnement du GAN, la structure du
+          code et les outils utilisés, cliquez sur l'onglet THEORIE pour lire
+          notre rapport de projet.
+
+          <br> Si vous souhaitez générer votre propre carte d'élévation, rentrez
+          les paramètres souhaités grâce aux sliders et générez dynamiquement
+          une nouvelle carte d'élévation. Vous aurez alors la possibilité de
+          visionner l'image en sortie du générateur mais également sa version
+          transformée en 3D.
+        </p>
+
+        <div class="form_container">
+
+          <form action="" method="post">
+            <ul class="list">
+              <li>
+                <input id="slider1" name="h_max" type="range" min="1" max="1000" value="500" class="slider">
+                <span> hauteur maximale en m : &nbsp  </span>
+                <span id="h_max">500</span>
+              </li>
+              <li>
+                <input id="slider2" name="h_mean" type="range" min="1" max="1000" value="500" class="slider">
+                <span> hauteur moyenne en m : &nbsp </span>
+                <span id="h_mean">500</span>
+              </li>
+
+            </ul>
+            <input id="generate" class="press" type="submit" name="gen" value="Generate new image">
+          </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

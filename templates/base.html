@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block titre %}base{% endblock %}</title>
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>MAPAGRAM</h1>
+            <ul id="nav">
+                    <li><a href="home" >RESULTATS</a></li>
+                    <li><a href="theorie">THEORIE</a></li>
+                    <li><a href="biblio">BIBLIOGRAPHIE</a></li>
+            </ul>
+        </header>
+
+        <!-- Page Content -->
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer -->
+        <footer>
+            <div>
+              <ul> Membres
+                  <li>Alex Fauduet</li>
+                  <li>Auriane Riou</li>
+                  <li>Candice van den Bergh</li>
+                  <li>Théo Vincent</li>
+              </ul>
+            </div>
+            <div>
+              <ul > Tuteurs
+                  <li>Xavier Clerc</li>
+                  <li>Clémentine Fourrier</li>
+              </ul>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+    </body>
+</html>

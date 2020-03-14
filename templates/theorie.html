@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block titre %}
+MAPAGRAM : THEORIE
+{% endblock %}
+
+{% block content %}
+
+<div class="page_container">
+    <div class="content">
+
+        <h2>Rapport du projet</h2>
+        <iframe width="684px" height="1000px" src="{{ url_for('static', filename='report.pdf') }}"></iframe>
+
+    </div>
+</div>
+
+{% endblock %}

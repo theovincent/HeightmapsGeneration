@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block titre %}
+MAPAGRAM : RESULTATS
+{% endblock %}
+
+{% block content %}
+
+<div class="page_container">
+    <div class="content">
+
+        <h2>Projet TDLOG - 2019/2020 </h2>
+        <h2>Génération de cartes d'élévation </h2>
+        <hr/>
+
+        <div class="form_container">
+          <img id="img1" src={{path_img1}}>
+          <div> Image 2D en sortie du générateur </div>
+          <br>
+          <div> Probabilité d'avoir une vraie image : {{p_true}}  </div>
+          <br>
+          <button class="press" type="button" onclick=
+                  "this.style.display='none';
+                  document.getElementById('legend3D').style.display='block';
+                  javascript:viewImage('img2',{{path_img2}});">Display 3D map</button>
+
+          <div id="img2" class="list"></div>
+          <br>
+          <div id="legend3D" style="display:none">
+            Carte du relief 3D correspondante et lissée
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
